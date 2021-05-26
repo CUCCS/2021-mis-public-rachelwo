@@ -125,7 +125,7 @@ if __name__ == "__main__":
 ![](img04/run1.PNG)
 ![](img04/run2.PNG)
   
-* *一些补充*
+* *一些补充*  
 因为luci界面每次登录的stok都不同，所以自动化漏洞利用时不仅需要获取用户名和密码，还有stok，方法如下：
 ![](img04/获取stok.PNG)
 然后同样copy as url后，使用在线工具转换成python代码
@@ -157,5 +157,6 @@ if __name__ == "__main__":
 ### 问题与解决  
 本章暂无
 ### 参考资料
-[移动互联网课件](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x04/cve-2019-12272.md)
+[移动互联网课件](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x04/cve-2019-12272.md)  
+
 [移动互联网教学视频](https://www.bilibili.com/video/BV1rr4y1A7nz?p=100)
