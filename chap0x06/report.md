@@ -73,8 +73,7 @@ adb shell am start -a android.intent.action.SENDTO -d sms:10086 --es sms_body ye
 
 
 <figure class="third">
-    <img src=img06/browser.PNG width=100 height=200/><img src=img06/dail.PNG width=100 height=200/><img src=img06/text.PNG width=100 height=200/>
-</figure>  
+    <img src=img06/browser.PNG width=100 height=200/><img src=img06/dail.PNG width=100 height=200/><img src=img06/text.PNG width=100 height=200/> </figure>  
   
   
 
@@ -104,20 +103,18 @@ usage: input ...
 
 
 <figure class="third">
-    <img src=img06/key-66.PNG width=100 height=200/><img src=img06/key-4.PNG width=100 height=200/><img src=img06/key-3.PNG width=100 height=200/>  
-</figure>  
+    <img src=img06/key-66.PNG width=100 height=200/><img src=img06/key-4.PNG width=100 height=200/><img src=img06/key-3.PNG width=100 height=200/> </figure>  
 
 
 
-### hello world v1
+#### hello world v1
 * **按照[教程](https://developer.android.google.cn/training/basics/firstapp/running-app)构建第一个应用**
 老师的视频和官方文档都讲的十分详细啦，在这里就不一一赘述
 最后的结果是：  
 
 
 <figure class="half">
-    <img src=img06/firstApp-1.PNG width=150 height=300/><img src=img06/firstApp-2.PNG width=150 height=300/>
-</figure>  
+    <img src=img06/firstApp-1.PNG width=150 height=300/><img src=img06/firstApp-2.PNG width=150 height=300/> </figure>  
 
 * **回答问题**
     - [x] 按照向导创建的工程在模拟器里运行成功的前提下，生成的APK文件在哪儿保存的？  
