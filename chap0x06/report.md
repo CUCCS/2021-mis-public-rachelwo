@@ -73,9 +73,7 @@ adb shell am start -a android.intent.action.SENDTO -d sms:10086 --es sms_body ye
 
 
 <figure class="third">
-    <img src=img06/browser.PNG width=100 height=200/>
-    <img src=img06/dail.PNG width=100 height=200/>
-    <img src=img06/text.PNG width=100 height=200/>
+    <img src=img06/browser.PNG width=100 height=200/><img src=img06/dail.PNG width=100 height=200/><img src=img06/text.PNG width=100 height=200/>
 </figure>  
   
   
@@ -106,9 +104,7 @@ usage: input ...
 
 
 <figure class="third">
-    <img src=img06/key-66.PNG width=100 height=200/>  
-    <img src=img06/key-4.PNG width=100 height=200/>  
-    <img src=img06/key-3.PNG width=100 height=200/>  
+    <img src=img06/key-66.PNG width=100 height=200/><img src=img06/key-4.PNG width=100 height=200/><img src=img06/key-3.PNG width=100 height=200/>  
 </figure>  
 
 
@@ -120,8 +116,7 @@ usage: input ...
 
 
 <figure class="half">
-    <img src=img06/firstApp-1.PNG width=150 height=300/>
-    <img src=img06/firstApp-2.PNG width=150 height=300/>
+    <img src=img06/firstApp-1.PNG width=150 height=300/><img src=img06/firstApp-2.PNG width=150 height=300/>
 </figure>  
 
 * **回答问题**
