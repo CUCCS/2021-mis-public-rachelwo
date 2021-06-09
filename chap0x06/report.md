@@ -37,7 +37,8 @@ adb pull remote local
 adb push local remote   
 # 安装应用
 adb install path_to_apk    
-```
+```  
+
 * **AVD Manager 命令实例**
 ```
 # Camera（照相机）的启动方法为:
@@ -68,12 +69,16 @@ am start -a android.intent.action.VIEW -d  http://sec.cuc.edu.cn/
 am start -a android.intent.action.CALL -d tel:10086
 # 发短信：
 adb shell am start -a android.intent.action.SENDTO -d sms:10086 --es sms_body ye --ez exit_on_sent true    
-``` 
+```  
+
+
 <figure class="third">
     <img src=img06/browser.PNG width=100 height=200/>
     <img src=img06/dail.PNG width=100 height=200/>
     <img src=img06/text.PNG width=100 height=200/>
 </figure>  
+  
+  
 
 * **Package Manager 命令**
 ```  
@@ -81,7 +86,8 @@ adb shell am start -a android.intent.action.SENDTO -d sms:10086 --es sms_body ye
  pm command
  # 也可以直接从 adb 发出软件包管理器命令，无需进入远程 shell
  adb shell pm uninstall com.example.MyApp
- ```
+ ```  
+
  * **其他ADB命令**
  ```  
  # 常用的按键对应的KEY_CODE
@@ -96,16 +102,23 @@ usage: input ...
        input keyevent <key code number or name>
        input tap <x> <y>
        input swipe <x1> <y1> <x2> <y2>  
-```
+```  
+
+
 <figure class="third">
-    <img src=img06/key-66.PNG width=100 height=200/>
-    <img src=img06/key-4.PNG width=100 height=200/>
-    <img src=img06/key-3.PNG width=100 height=200/>
+    <img src=img06/key-66.PNG width=100 height=200/>  
+    <img src=img06/key-4.PNG width=100 height=200/>  
+    <img src=img06/key-3.PNG width=100 height=200/>  
 </figure>  
+
+
+
 ### hello world v1
 * **按照[教程](https://developer.android.google.cn/training/basics/firstapp/running-app)构建第一个应用**
 老师的视频和官方文档都讲的十分详细啦，在这里就不一一赘述
-最后的结果是：
+最后的结果是：  
+
+
 <figure class="half">
     <img src=img06/firstApp-1.PNG width=150 height=300/>
     <img src=img06/firstApp-2.PNG width=150 height=300/>
@@ -160,5 +173,5 @@ g.按照以下步骤操作，在设备上运行应用：
 * MainActivity.java中``` EditText editText = (EditText) findViewById(R.id.editTextTextPersonName)```报错
     >这段代码是通过id寻找编辑文本框，所以不能够简单的从教程复制，要看自己的布局文件（activity_main.xml)里面编辑文本框的id是什么。  
 ### 参考资料
-[第六章实验指导](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x06/exp.md)
+[第六章实验指导](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x06/exp.md)  
 [Android Studio官方教程](https://developer.android.google.cn/training/basics/firstapp/running-app)
