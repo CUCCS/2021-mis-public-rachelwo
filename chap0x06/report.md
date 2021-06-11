@@ -158,12 +158,53 @@ g.按照以下步骤操作，在设备上运行应用：
         ComponentName componentName = new ComponentName(MainActivity.this, MainActivity.class);
         packageManager.setComponentEnabledSetting(componentName,
         PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-        ```
+        ```  
+#### hello world v2  
+
+在v1基础之上，我们增加以下新功能来为后续的程序逆向和组件安全实验做一些“标靶”  
+* 使用SharedPreferences持久化存储小数据并按需读取  
+* 实现一个简单的注册码校验功能  
+
+源代码可以参见[移动互联网安全课本](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x06/exp.md)   
+* **作出的修改有：**  
+    * 使用ALT+ENTER键自动导入缺失的类  
+    * 在string.xml中添加参数  
+    ![](img06/string.PNG)  
+    * 删掉hello world v1中DisplayMessageActivity.xml布局中的textview  
+* **运行程序**  
+    * 如果用户输入内容与将密钥种子```sec.cuc.edu.cn```进行md5加密后，所得字符串的前4位相等，输出OK，否则输出Failed  
+    * 密钥种子加密结果  
+    ![](img06\MD5.PNG)
+    * 运行结果(Failed)
+    &nbsp;  
+    ![](img06/failed.PNG)   
+    &nbsp;
+    &nbsp;
+    * 运行结果(OK)
+    &nbsp;  
+    ![](img06/OK.PNG) 
+* **回答问题**  
+    - [x] DisplayMessageActivity.java中的2行打印日志语句是否有风险？如果有风险，请给出漏洞利用示范。如果没有风险，请给出理由。  
+    >有风险，可以通过打印日志得知用户每次输入的内容，例如通过``` logcat | grep user```命令查看日志  
+    ![](img06/log.PNG) 
+    - [x] SharedPreferences类在进行读写操作时设置的Context.MODE_PRIVATE参数有何作用和意义？还有其他可选参数取值吗？  
+    >MODE_PRIVATE为默认操作模式，代表该文件是私有数据，只能被应用本身访问，在该模式下，写入的内容会覆盖原文件的内容。
+      Context.MODE_PRIVATE：为默认操作模式，代表该文件是私有数据，只能被应用本身访问，在该模式下，写入的内容会覆盖原文件的内容。
+      Context.MODE_APPEND：模式会检查文件是否存在，存在就往文件追加内容，否则就创建新文件。  
+      Context.MODE_WORLD_READABLE和Context.MODE_WORLD_WRITEABLE用来控制其他应用是否有权限读写该文件。  
+      MODE_WORLD_READABLE：表示当前文件可以被其他应用读取；  
+      MODE_WORLD_WRITEABLE：表示当前文件可以被其他应用写入。
+
+
+
 ### 问题与解决
 * 无法直接在命令行使用ADB命令
     >将adb.exe的路径添加到环境变量中，我的是C:\Microsoft\AndroidSDK\25\platform-tools
 * MainActivity.java中``` EditText editText = (EditText) findViewById(R.id.editTextTextPersonName)```报错
     >这段代码是通过id寻找编辑文本框，所以不能够简单的从教程复制，要看自己的布局文件（activity_main.xml)里面编辑文本框的id是什么。  
 ### 参考资料
-[第六章实验指导](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x06/exp.md)  
-[Android Studio官方教程](https://developer.android.google.cn/training/basics/firstapp/running-app)
+[第六章实验指导](https://github.com/c4pr1c3/cuc-mis/blob/master/chap0x06/exp.md)    
+[Android Studio官方教程](https://developer.android.google.cn/training/basics/firstapp/running-app)    
+[师姐的作业](https://github.com/CUCCS/2018-NS-Public-jckling/blob/master/mis-0x06/AS%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A.md)    
+[android 的四种枚举Context.MODE_PRIVATE](https://www.cnblogs.com/nucdy/p/5094297.html)  
+[Android_存储之SharedPreferences](https://www.cnblogs.com/fanglongxiang/p/11390013.html)  
