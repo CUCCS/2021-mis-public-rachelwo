@@ -41,7 +41,7 @@
     第一次登陆需要设置服务器  
     ![](img08/设置服务器IP.PNG)
     使用合法用户（jack/Jack@123$)登录  
-    ![](img08/成功登录.PNG)  
+    <img src=img08/成功登录.PNG width="250" ></img> 
 * **下载jadx工具**  
 ```  
   git clone https://github.com/skylot/jadx.git
@@ -148,7 +148,7 @@ cd /data/data/com.android.insecurebankv2/shared_prefs/
 ![](img08/存储密钥.PNG)
 * 使用jadx-gui打开之前生成的classes-dex2jar.jar，找到了   
 ![](img08/super-key.PNG)  
-* 根据上述得到的数据，在cyperchef进行解密  
+* 根据上述得到的数据，在cypherchef进行解密  
 ![](img08/解密完成.PNG)  
 即可获取用户登陆密码 
 ### 问题与解决  
